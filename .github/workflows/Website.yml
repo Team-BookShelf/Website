@@ -1,0 +1,30 @@
+name: "Website"
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize, edited]
+
+jobs:
+  FrontendJob:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Frontend
+    steps:
+      - name: Checkout to the repository
+        uses: actions/checkout@v2
+
+      - name: Set up NodeJS environment
+        uses: actions/setup-node@v2
+
+      - name: Install package dependencies
+        run: npm ci
+
+      # - name: Execute test cases
+      #   run: npm run test
+        
+      - name: Create test build
+        run: npm run build
