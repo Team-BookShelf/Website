@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 const Container = styled.div`
   height: 30px;
-  background-color: teal;
-  color: white;
+  background-color: pink;
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +12,7 @@ const Container = styled.div`
 `;
 
 const Announcement = () => {
-  return <Container>Super Deal! Free Shipping on Orders Over $50</Container>;
+  return <Container>Super Deal! Free Shipping on Orders Over 399/-</Container>;
 };
 
 export default Announcement;
