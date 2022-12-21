@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {mobile} from "../responsive";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   width: 100vw;
@@ -58,17 +58,21 @@ const Link = styled.a`
 `;
 
 const Login = () => {
+  const handleLogin = (e) => {
+    // e.preventDefault();
+    // navigate('./')
+  };
   return (
     <Container>
       <Wrapper>
         <Title>SIGN IN</Title>
-        <Form>
+        <Form onSubmit={handleLogin}>
           <Input placeholder="username" />
           <Input placeholder="password" />
-          <Button>LOGIN</Button>
-          <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
-          <Link>CREATE A NEW ACCOUNT</Link>
+          <Button type="submit">LOGIN</Button>
         </Form>
+        <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
+        <Link>CREATE A NEW ACCOUNT</Link>
       </Wrapper>
     </Container>
   );
