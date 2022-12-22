@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100vw;
@@ -8,7 +9,7 @@ const Container = styled.div`
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+    url("https://media1.popsugar-assets.com/files/thumbor/pTK-6vUgUqcu35X7o8xXBtgShcY/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2020/06/23/971/n/1922441/tmp_mSJFVp_28ff492f09755998_GettyImages-1141650658.jpg")
       center;
   background-size: cover;
   display: flex;
@@ -19,6 +20,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   width: 25%;
   padding: 20px;
+  // border: black 6px solid;
   background-color: white;
   ${mobile({ width: "75%" })}
 `;
@@ -50,12 +52,12 @@ const Button = styled.button`
   margin-bottom: 10px;
 `;
 
-const Link = styled.a`
-  margin: 5px 0px;
-  font-size: 12px;
-  text-decoration: underline;
-  cursor: pointer;
-`;
+// const Link = styled.a`
+//   margin: 5px 0px;
+//   font-size: 12px;
+//   text-decoration: underline;
+//   cursor: pointer;
+// `;
 
 const Login = () => {
   const handleLogin = (e) => {
@@ -71,8 +73,7 @@ const Login = () => {
           <Input placeholder="password" />
           <Button type="submit">LOGIN</Button>
         </Form>
-        <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
-        <Link>CREATE A NEW ACCOUNT</Link>
+        <Link to="/register">CREATE A NEW ACCOUNT</Link>
       </Wrapper>
     </Container>
   );
