@@ -34,14 +34,14 @@ const TopButton = styled.button`
   color: ${(props) => props.type === "filled" && "white"};
 `;
 
-const TopTexts = styled.div`
-  ${mobile({ display: "none" })}
-`;
-const TopText = styled.span`
-  text-decoration: underline;
-  cursor: pointer;
-  margin: 0px 10px;
-`;
+// const TopTexts = styled.div`
+//   ${mobile({ display: "none" })}
+// `;
+// const TopText = styled.span`
+//   text-decoration: underline;
+//   cursor: pointer;
+//   margin: 0px 10px;
+// `;
 
 const Bottom = styled.div`
   display: flex;
@@ -80,14 +80,14 @@ const ProductName = styled.span``;
 
 const ProductId = styled.span``;
 
-const ProductColor = styled.div`
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: ${(props) => props.color};
-`;
+// const ProductColor = styled.div`
+//   width: 20px;
+//   height: 20px;
+//   border-radius: 50%;
+//   background-color: ${(props) => props.color};
+// `;
 
-const ProductSize = styled.span``;
+// const ProductSize = styled.span``;
 
 const PriceDetail = styled.div`
   flex: 1;
