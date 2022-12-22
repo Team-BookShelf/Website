@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  height: 30px;
-  background-color: pink;
-  color: black;
+  height: 2px;
+  background-color: white;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;

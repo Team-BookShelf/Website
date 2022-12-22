@@ -8,7 +8,7 @@ const Container = styled.div`
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("https://images.pexels.com/photos/6984661/pexels-photo-6984661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPI8SmISQQ6HaOyGAoZ0dhzbfhIWdfmqCnFA&usqp=CAU")
       center;
   background-size: cover;
   display: flex;
