@@ -33,7 +33,7 @@ jobs:
       - name: Create test build
         run: npm run build
   MLJob:
-    if: "'[ -d ML ]'"
+    if: "[ -d ML ]"
     runs-on: ubuntu-latest
     defaults:
       run:
