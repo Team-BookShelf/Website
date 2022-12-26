@@ -31,7 +31,7 @@ jobs:
   BackendJob:
     runs-on: ubuntu-latest
     defaults:
-     	 run:
+      run:
          working-directory: Backend
 
     strategy:
@@ -47,7 +47,7 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
-   MLJob:
+  MLJob:
     if: "'[ -d ML ]'"
     runs-on: ubuntu-latest
     defaults:
