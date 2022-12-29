@@ -53,11 +53,11 @@ jobs:
       - run: npm test
   MLJob:
    runs-on: ubuntu-latest
-    strategy:
+   strategy:
       matrix:
         python-version: ["3.7", "3.8", "3.9", "3.10"]
 
-    steps:
+   steps:
       - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
