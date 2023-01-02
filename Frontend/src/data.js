@@ -27,16 +27,19 @@ export const categories = [
     id: 1,
     img: "https://images.unsplash.com/photo-1528459584353-5297db1a9c01?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHBsYWlufGVufDB8fDB8fA%3D%3D&w=1000&q=80",
     title: "MYSTERY BOOKS",
+    cat: "mystery"
   },
   {
     id: 2,
     img: "https://images.unsplash.com/photo-1528459584353-5297db1a9c01?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHBsYWlufGVufDB8fDB8fA%3D%3D&w=1000&q=80",
     title: "FICTION BOOKS",
+    cat:"fiction"
   },
   {
     id: 3,
     img: "https://images.unsplash.com/photo-1528459584353-5297db1a9c01?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHBsYWlufGVufDB8fDB8fA%3D%3D&w=1000&q=80",
     title: "MYTHOLOGY",
+    cat:"mythology"
   },
 ];
 
