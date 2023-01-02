@@ -32,6 +32,27 @@ jobs:
         
       - name: Create test build
         run: npm run build
+
+  BackendJob:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+         working-directory: Backend
+
+    strategy:
+      matrix:
+        node-version: [10.x, 14.x, 15.x, 16.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test
+
   MLJob:
     if: "'[ -d ML ]'"
     runs-on: ubuntu-latest
