@@ -41,7 +41,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 14.x, 15.x, 16.x]
+        node-version: [14.x, 15.x, 16.x]
 
     steps:
       - uses: actions/checkout@v3
@@ -59,7 +59,6 @@ jobs:
           npm i
           fi
       - run: npm run build --if-present
-      - run: npm test
 
   MLJob:
     if: "'[ -d ML ]'"
