@@ -5,9 +5,9 @@ import Newsletter from "../components/Newsletter";
 import { mobile } from "../responsive";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { publicRequest } from "../requestMethods";
 import { addProduct } from "../redux/cartRedux";
 import { useDispatch } from "react-redux";
+import { popularProducts } from "../data";
 
 const Container = styled.div``;
 
@@ -46,7 +46,6 @@ const Price = styled.span`
   font-weight: 100;
   font-size: 40px;
 `;
-
 
 const AddContainer = styled.div`
   width: 50%;
@@ -87,16 +86,16 @@ const Button = styled.button`
 
 const Product = () => {
   const location = useLocation();
-  const id = location.pathname.split("/")[2];
-  const [product, setProduct] = useState({});
+  const id = location.state.id
   const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
+  const [productdata, setProductdata] = useState({})
 
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const res = await publicRequest.get("/products/find/" + id);
-        setProduct(res.data);
+        const newData=popularProducts.filter(item=> item.id===id)
+        setProductdata(newData[0])
       } catch {}
     };
     getProduct();
@@ -112,20 +111,20 @@ const Product = () => {
 
   const handleClick = () => {
     dispatch(
-      addProduct({ ...product, quantity})
+      addProduct({ ...productdata, quantity})
     );
   };
-  console.log(product);
+  // console.log(product);
   return (
     <Container>
       <Wrapper>
         <ImgContainer>
-          <Image src={product.img} />
+          <Image src={productdata.img} />
         </ImgContainer>
         <InfoContainer>
-          <Title>{product.title}</Title>
-          <Desc>{product.desc}</Desc>
-          <Price>Rs. {product.price}</Price>
+          <Title>{productdata.title}</Title>
+          <Desc>{productdata.desc}</Desc>
+          <Price>Rs. {productdata.price}</Price>
           <AddContainer>
             <AmountContainer>
               <Remove onClick={() => handleQuantity("dec")} />

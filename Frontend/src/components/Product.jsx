@@ -1,9 +1,10 @@
+import { Button } from "@material-ui/core";
 import {
   FavoriteBorderOutlined,
   SearchOutlined,
   ShoppingCartOutlined,
 } from "@material-ui/icons";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const Info = styled.div`
@@ -68,19 +69,25 @@ const Icon = styled.div`
 `;
 
 const Product = ({ item }) => {
+  const navigate=useNavigate()
+
+  const handleClick=()=>{
+    console.log("clicked")
+    navigate('/product',{state:{id:item.id}})
+  }
   return (
     <Container>
       <Circle />
       <Image src={item.img} />
       <Info>
         <Icon>
-          <Link to="/product"><ShoppingCartOutlined /></Link>
+          <Button onClick={handleClick}><ShoppingCartOutlined /></Button>
         </Icon>
         <Icon>
-          <Link to="/product"><SearchOutlined /></Link>
+        <Button onClick={handleClick}><SearchOutlined /></Button>
         </Icon>
         <Icon>
-          <Link to="/product"><FavoriteBorderOutlined /></Link>
+        <Button onClick={handleClick}><FavoriteBorderOutlined /></Button>
         </Icon>
       </Info>
     </Container>
