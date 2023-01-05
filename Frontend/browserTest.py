@@ -41,7 +41,9 @@ time.sleep(2)
 driver.find_element(By.CLASS_NAME,'sc-ilhmMj').click() #shop now
 time.sleep(2)
 
-driver.find_element(By.CLASS_NAME,'sc-jcMfQk').click() #cart icon
+cart_icons=driver.find_elements(By.CLASS_NAME,'sc-jcMfQk')#cart icon
+
+cart_icons[0].click()
 time.sleep(2)
 
 '''
@@ -58,11 +60,13 @@ while True:
         time.sleep(2)
         break
 
+
 buttons[3].click()
 time.sleep(2)
 
 buttons[2].click()
 time.sleep(2)
+
 
 driver.find_element(By.CLASS_NAME,'form-control').send_keys('1984')
 time.sleep(2)
