@@ -29,6 +29,8 @@ jobs:
           else
           npm install
           fi
+      - name: Run tests
+        run: npm run test
         
       - name: Create test build
         run: npm run build
