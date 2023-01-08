@@ -27,6 +27,7 @@ jobs:
          python -m pip install --upgrade pip
          pip install flake8 pytest
          pip install selenium
+         pip install Service
          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-#       - name: Run Selenium script
-#         run:  python browserTest.py
+      - name: Run Selenium script
+        run:  python browserTest.py
