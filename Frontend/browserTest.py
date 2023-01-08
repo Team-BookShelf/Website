@@ -24,12 +24,13 @@ for i in buttons:
         time.sleep(2)
     if i.text=='SIGN IN':
         i.click()
+        print(i.text)
         time.sleep(2)
     if i.text=='RECOMMEND':
         continue
     else : 
         i.click()
-        time.sleep(2)
+        time.sleep(2) 
 
 buttons[1].click()
 print(buttons[3].text)
