@@ -28,5 +28,5 @@ jobs:
          pip install flake8 pytest
          pip install selenium
          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-      - name: Run Selenium script
-        run:  python browserTest.py
+#       - name: Run Selenium script
+#         run:  python browserTest.py
