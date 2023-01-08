@@ -13,7 +13,7 @@ options.headless = True
 
 driver=webdriver.Chrome(service=service, options=options)
 
-driver.get("http://localhost:3000")
+driver.get("https://cozy-rabanadas-6d2b0b.netlify.app/")
 
 buttons =driver.find_elements(By.CLASS_NAME,'sc-uhnfH')
 
