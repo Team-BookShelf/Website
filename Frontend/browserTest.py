@@ -74,7 +74,7 @@ buttons[2].click()
 time.sleep(2)
 
 
-driver.find_element(By.CLASS_NAME,'form-control').send_keys('1984')
-time.sleep(2)
-driver.find_element(By.CLASS_NAME,'btn').click()
-time.sleep(2)
+# driver.find_element(By.CLASS_NAME,'form-control').send_keys('1984')
+# time.sleep(2)
+# driver.find_element(By.CLASS_NAME,'btn').click()
+# time.sleep(2)
