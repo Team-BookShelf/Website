@@ -2,12 +2,16 @@ import os
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 os.environ['PATH']+=r"C:/SeleniumDrivers"
+service = ChromeService(executable_path="/snap/bin/chromium.chromedriver")
+options = webdriver.ChromeOptions()
+options.headless = True
 
-driver=webdriver.Chrome()
+driver=webdriver.Chrome(service=service, options=options)
 
 driver.get("http://localhost:3000")
 
@@ -16,6 +20,7 @@ buttons =driver.find_elements(By.CLASS_NAME,'sc-uhnfH')
 for i in buttons:
     if i.text=='REGISTER':
         i.click()   
+        print(i.text)
         time.sleep(2)
     if i.text=='SIGN IN':
         i.click()
