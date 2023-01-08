@@ -103,5 +103,5 @@ jobs:
      - name: Run Selenium script
        run: |
           env:
-            SOME_SECRET: ${{secrets.SOME_SECRET}}
+            export SOME_SECRET=${{secrets.SOME_SECRET}}
           python browserTest.py
