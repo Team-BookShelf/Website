@@ -166,10 +166,10 @@ const Cart = () => {
                 <Image src={product.img}/>
                 <Details>
                   <ProductName>
-                    <b>Book - </b> {product.title}
+                    <b>Book Name - </b> {product.title}
                   </ProductName>
                   <ProductId>
-                    <b>ID:</b> {product.id}
+                    <b>Book Id:</b> {product.id}
                   </ProductId>
                 </Details>
               </ProductDetail>
