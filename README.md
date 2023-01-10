@@ -73,7 +73,7 @@ Code editor
 <p><h2><a id="index7"></a>🖼 App Screenshots</h2></p>
 <table>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/90026952/209478701-ccc26b72-d349-4606-b2c3-5eedd9207ecc.jpeg" width=250 height=480></td>
-      <td><img src="https://user-images.githubusercontent.com/90026952/209478717-7c5560aa-865a-43a2-9d7d-686691f1c245.jpeg" width=250 height=480></td>
-        <td><img src="https://user-images.githubusercontent.com/90026952/209478730-7629201e-4bd3-4198-a373-f76823a7a922.jpeg" width=250 height=480></td></tr>
+    <td><img src="https://user-images.githubusercontent.com/90026952/209478701-ccc26b72-d349-4606-b2c3-5eedd9207ecc.jpeg"></td>
+      <td><img src="https://user-images.githubusercontent.com/90026952/209478717-7c5560aa-865a-43a2-9d7d-686691f1c245.jpeg"></td>
+        <td><img src="https://user-images.githubusercontent.com/90026952/209478730-7629201e-4bd3-4198-a373-f76823a7a922.jpeg"></td></tr>
 </table>
